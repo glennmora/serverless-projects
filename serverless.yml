@@ -1,0 +1,15 @@
+service: sf-nodejslambdaapi
+app: cloud9app
+org: gmoradevops
+provider:
+  name: aws
+  region: us-west-1
+  stage: dev
+  runtime: nodejs18.x
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: sfAPI
+          method: get
